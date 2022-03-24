@@ -36,7 +36,7 @@ t0=$(date +%s)
 # load desired MATLAB module
 module load matlab/R2021a
 # commands to be executed
-matlab-threaded -nodesktop -r "<ENTER MATLAB SCRIPT NAME HERE>, exit"
+matlab-threaded -nodesktop -nosplash -r "<ENTER MATLAB SCRIPT NAME HERE>, exit"
 # get time at end of execution step
 t1=$(date +%s)
 
