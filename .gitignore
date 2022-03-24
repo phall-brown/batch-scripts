@@ -2,4 +2,7 @@
 *.o
 *.err
 *.e
-
+*.log
+*.o
+*.mod
+*.pyc
