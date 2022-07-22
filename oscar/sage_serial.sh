@@ -11,7 +11,7 @@
 # Request use of 1 core on a single node (-N 1)
 #SBATCH -N 1
 #SBATCH --cpus-per-task=1
-#SABTCH --ntasks=1
+#SBATCH --ntasks=1
 
 # Request 32 GB of memory
 #SBATCH --mem-per-cpu=32G
