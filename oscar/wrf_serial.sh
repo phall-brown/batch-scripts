@@ -36,10 +36,19 @@
 module load wrf/4.2.1_hpcx_2.7.0_intel_2020.2_slurm20
 module load mpi/hpcx_2.7.0_intel_2020.2_slurm20
 module load intel/2020.2
-
-# commands to be executed (change name of python script to use)
-# note: -u flag has python run without buffering output
-echo $WPS_GEOG
-echo $WPS
-#srun --mpi=pmix wrf.exe
+# report the modules loaded into the environment (for records)
+echo '**************'
+echo 'MODULES LOADED'
+echo '**************'
+module list 2>&1
+echo '**************'
+# report relevant environment variables
+echo '******************************'
+echo 'RELEVANT ENVIRONMENT VARIABLES'
+echo '******************************'
+echo 'WPS: '$WPS
+echo 'WPS_GEO: '$WPS_GEOG
+echo '******************************'
+# run WRF
+wrf.exe
 
