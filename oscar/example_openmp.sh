@@ -1,5 +1,5 @@
 #!/bin/bash
-# Example batch script for running threaded openmp on Oscar
+# Example batch script for running openmp on Oscar
 #**********************
 # SLURM JOB INFORMATION
 #**********************
