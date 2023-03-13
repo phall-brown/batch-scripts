@@ -37,4 +37,4 @@ module load gcc/10.2
 EXAMPLE_VARIABLE="Hello!"
 # commands to be executed (change to suit your needs)
 echo $EXAMPLE_VARIABLE
-srun --mpi=mpix echo $EXAMPLE_VARIABLE 
+srun --mpi=pmix echo $EXAMPLE_VARIABLE 
