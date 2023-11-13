@@ -4,7 +4,7 @@
 # SLURM JOB INFORMATION
 #**********************
 # Walltime requested for job (1 hour)
-#SBATCH -t 01:00:00
+#SBATCH --time=01:00:00
 
 # Request use of 1 core and 8GB of memory on 1 node
 #SBATCH --nodes=1
@@ -13,7 +13,7 @@
 #SBATCH --mem-per-cpu=750G
 
 # Define Oscar partition to use
-#SBATCH -p bigmem
+#SBATCH --partition=bigmem
 
 # Job Name
 #SBATCH -J MySerialJob 
@@ -31,7 +31,11 @@
 # COMMANDS TO EXECUTE
 #********************
 # load desired modules (change to suit your particular needs)
-conda activate conda_environment_name
+module load python/3.9.0
+module load gcc/10.2 
+# activate virtual environment
+#source ~/envs/myvirtualenv.venv/bin/activate
+# set environment variables (change to suit your needs)
+EXAMPLE_VARIABLE="Hello!"
 # commands to be executed (change to suit your needs)
-python test.py
-
+echo $EXAMPLE_VARIABLE
