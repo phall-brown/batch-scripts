@@ -31,12 +31,14 @@
 # COMMANDS TO EXECUTE
 #********************
 # load desired modules (change to suit your particular needs)
-module load python/3.9.0
-module load gcc/10.2 
+#module load matlab/R2023a
+
 # activate virtual environment
 #source ~/envs/myvirtualenv.venv/bin/activate
+
 # set environment variables (change to suit your needs)
 EXAMPLE_VARIABLE="Hello!"
+
 # commands to be executed (change to suit your needs)
 echo $EXAMPLE_VARIABLE
 

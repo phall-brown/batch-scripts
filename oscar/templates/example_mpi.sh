@@ -6,7 +6,7 @@
 # Walltime requested for job (24 hrs)
 #SBATCH --time=24:00:00
 
-# Request use of 48 cores and 4GB of memory per core on 4 nodes
+# Request use of 48 cores and 4GB of memory per core on 4 nodes (192 cores total)
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=48
 #SBATCH --cpus-per-task=1
@@ -31,12 +31,14 @@
 # COMMANDS TO EXECUTE
 #********************
 # load desired modules (change to suit your particular needs)
-module load mpi/openmpi_4.0.7_gcc_10.2_slurm22
-module load gcc/10.2 
+module load hpcx-mpi/4.1.5rc2s
+
 # activate virtual environment
 #source ~/envs/myvirtualenv.venv/bin/activate
+
 # set environment variables (change to suit your needs)
 EXAMPLE_VARIABLE="Hello!"
+
 # commands to be executed (change to suit your needs)
 echo $EXAMPLE_VARIABLE
 srun --mpi=pmix echo $EXAMPLE_VARIABLE 

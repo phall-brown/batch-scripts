@@ -13,7 +13,8 @@
 #SBATCH --mem-per-cpu=8G
 
 # Define condo account to use
-#SBATCH --acount=epscor-condo
+# replace CONDONAME with your condo's name (e.g.,carney-condo, cbc-condo) 
+#SBATCH --acount=CONDONAME-condo
 
 # Job Name
 #SBATCH -J MySerialJob 
@@ -31,12 +32,14 @@
 # COMMANDS TO EXECUTE
 #********************
 # load desired modules (change to suit your particular needs)
-module load python/3.9.0
-module load gcc/10.2 
+#module load matlab/R2023a
+
 # activate virtual environment
 #source ~/envs/myvirtualenv.venv/bin/activate
+
 # set environment variables (change to suit your needs)
 EXAMPLE_VARIABLE="Hello!"
+
 # commands to be executed (change to suit your needs)
 echo $EXAMPLE_VARIABLE
 

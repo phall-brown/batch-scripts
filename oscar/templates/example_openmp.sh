@@ -6,7 +6,7 @@
 # Walltime requested for job (24 hrs)
 #SBATCH --time=24:00:00
 
-# Request use of 48 cores and 4GB of memory per core on 1 node
+# Request use of 48 cores and 4GB of memory per core on 1 node (48 cores total)
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=48
 #SBATCH --cpus-per-task=1
@@ -31,12 +31,16 @@
 # COMMANDS TO EXECUTE
 #********************
 # load desired modules (change to suit your particular needs)
-module load python/3.9.0
-module load gcc/10.2 
+#module load matlab/R2023a
+
 # activate virtual environment
 #source ~/envs/myvirtualenv.venv/bin/activate
+
 # set environment variables (change to suit your needs)
 EXAMPLE_VARIABLE="Hello!"
+# set OMP_NUM_THREADS >1 for jobs using OMP (likely want it equal to ntasks-per-node)
+OMP_NUM_THREADS=48
+
 # commands to be executed (change to suit your needs)
 echo $EXAMPLE_VARIABLE
 
